@@ -5,9 +5,9 @@ Implementation of an encoder-decoder architecture for number sorting using only 
 Given an array 'x' of numbers to be sorted. To ensure that the output are
 at least numbers of the original array 'x', we could let the network predict the indices
 that would sort 'x' ([argsort](https://numpy.org/doc/stable/reference/generated/numpy.argsort.html)) 
-and post process these indices to get a sorted array.
-Since indices are integers ranging from 0 to the array length, we can use one hot
-encoding for the labels 'y' and softmax cross entropy as loss function.
+and post process these indices to get the sorted array.
+Since indices are integers ranging from 0 to the length of the array, we can use one hot
+encoding for the labels 'y' and categorical cross entropy as loss function.
 
 Example of one pair of data:
 
